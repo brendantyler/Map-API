@@ -1,0 +1,33 @@
+:root{
+  --app-bg-dark: #223342;
+  --app-white: #ffffff;
+  --app-red: #ff3c57;
+  --app-green: #33ab4e;
+  --app-blue: #3c57ff;
+  --app-purple: #833cff;
+  --app-orange: #ff833c;
+}
+
+body{
+  background-color: var(--app-bg-dark);
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #ffffff;
+}
+
+li {
+  list-style: none;
+}
+.container {
+  width: min(100% - 30px, 1080px);
+  margin-inline: auto;
+}
+
+main {
+  padding: 0px;
+}
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 20px;
+}
