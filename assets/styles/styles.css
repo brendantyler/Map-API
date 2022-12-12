@@ -12,6 +12,9 @@ body{
   background-color: var(--app-bg-dark);
   font-family: 'Source Sans Pro', sans-serif;
   color: #ffffff;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 li {
@@ -36,7 +39,7 @@ header{
   background:#223342 ;
   display: flex;
   justify-content: space-between;
-  width: 80%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -52,6 +55,30 @@ li {
   margin-top: 1.25vh;
 }
 
+
+#hero-banner img{
+  width: 100%;
+  
+}
+
+#about{
+  text-align: center;
+  width: 70vh;
+  margin-right: auto;
+  margin-left: auto;
+}
+#about p {
+  font-size: 2.5vh;
+  margin-bottom: 2vh;
+}
+#sign-up-btn {
+  background:#3c607f;
+  color: white;
+  border-radius: 2vh;
+  height: 5vh;
+  width: 12vh;
+}
+
 /*MapStyles*/
 #map-container {
   display: flex;
@@ -59,7 +86,6 @@ li {
   justify-content: center;
   margin-right: auto;
   margin-left: auto;
-  width: 80%;
   height: 70vh;
 }
 
