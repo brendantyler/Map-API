@@ -16,15 +16,17 @@
   <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
 
 </head>
-<body>
 
-  <header>
-    <h2 id="logo">HereIsLogo</h2>
-    <ul id="links">
-      <li>Contact</li>
-      <li>About Us</li>
-      <li>Location</li>
-    </ul>
+<body>
+    <header>
+    <div id="header-container">
+      <h2 id="logo"><em>Drone Delivery Serivces</em></h2>
+      <ul id="links">
+        <li>Contact</li>
+        <li>About Us</li>
+        <li>Location</li>
+      </ul>
+    </div>
   </header>
 
   <section id="hero-banner">
@@ -40,7 +42,7 @@
         Too many things to store and not enough space? Don't want to drive to a warehouse? 
       </p>
       <p>
-        We are a drone storage and item delivery system that will take your unwanted items and take it to and from your home! Our custom made high strength cargo drones can carry up to 500lbs in weight and can still maintain speeds of 80km/h. 
+        We are a drone storage and item delivery system that will take your unwanted items and take them to and from your home! Our custom made high strength cargo drones can carry up to 500lbs in weight and still maintain speeds of 80km/h. 
       </p>  
       <p>That is enough strength and speed to carry a fridge over 200 football fields in 15 minutes!</p>
     </div>
@@ -50,8 +52,19 @@
   <section id="location">
     <div id="map-container">
       <h2 id="location-title">Location</h2>
-      <div id='map'></div>
+
+    <div id="check-location-text">
+      <p>Accept Location Services to see we provide the services to your area</p>
+      <button id="check-location-btn"> Check location</button>
     </div>
+
+    <div id='map'></div>
+    </div>
+
+    <div id="service">
+      <p>Is Service Provided:</p>
+      <p id="service-response"></p>
+    </div>  
   </section>
 
   <section id="contact">
