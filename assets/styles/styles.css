@@ -144,3 +144,72 @@ li {
 #service-response {
   margin-left: 2vh;
 }
+
+/* FORM */
+#contact{
+  margin: auto;
+  margin-top: 10vh;
+  width: 80%;
+}
+
+article {
+  width: 60%;
+  display: flex;
+  margin: 20px auto;
+}
+
+article p {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: left;
+}
+
+.form-wrapper {
+  width: 70vh;
+  display: flex;
+  margin: 40px auto;
+}
+
+.form-input {
+  display: flex;
+  padding: 10px 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 80vh;
+}
+
+article h3 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+input[type="text"], input[type='email'], textarea {
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  font-weight: 400;
+  padding: 12px;
+  width: 100%;
+  transition: all .5s ease-in-out;
+  border-radius: 6px;
+  box-shadow: 1px 1px 2px 0 rgb(0 0 0 / 0.2);
+}
+
+.submit-button {
+  display: flex;
+  flex-direction: row-reverse;
+  padding-bottom: 5vh;
+}
+
+#send{
+  background:#3c607f;
+  color: white;
+  border-radius: 2vh;
+  padding: 1vh;
+
+}
+

@@ -11,7 +11,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYnJlbmRhbmdhbG1hbiIsImEiOiJja3hkaDY3ejMwZDhoM
 const map = new mapboxgl.Map({
   container: 'map',
   style: 'mapbox://styles/mapbox/streets-v11',
-  center: [-97.14111, 49.89953],
+  center: [-51.92528, -14.235004],
   zoom: 5
 });
 
@@ -19,7 +19,7 @@ map.addControl(new mapboxgl.NavigationControl());
 
 /* Marker */
 const marker = new mapboxgl.Marker() // initialize a new marker
-  .setLngLat([-97.14111, 49.89953]) // Marker [lng, lat] coordinates
+  .setLngLat([-51.92528, -14.235004]) // Marker [lng, lat] coordinates
   .addTo(map);
 
 checkLocation.addEventListener('click', getUserLocation);
@@ -39,13 +39,40 @@ function showPosition(position) {
   let lng = position.coords.longitude;
 
   updateMarker(lng, lat);
+
+  mapEaseTo(lng, lat);
+
+  setTimeout(changeServiceText, 4000)
+}
+
+function updateMarker(lng, lat){
+  marker.setLngLat([lng, lat]);
+}
+
+function mapEaseTo(lng, lat){
+  map.easeTo({
+    center: [lng, lat],
+    pitch: 60,
+    bearing: -70,
+    zoom: 14,
+    speed: 0.2,
+    curve: 1,
+    duration: 4000
+  });
+}
+
+function changeServiceText(){
   locationResponse.innerHTML = "Yes"
   console.log (`Latitude: ${lat}
   Longitude: ${lng}`)
 }
 
-function updateMarker(lng, lat){
-  marker.setLngLat([lng, lat]);
+function mapSetPitch(){
+  map.setPitch(40, {duration:2000});
+}
+
+function mapZoomIn(){
+  map.zoomIn({duration: 2000});
 }
 
 function showError(error) {
